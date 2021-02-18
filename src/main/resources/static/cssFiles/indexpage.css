@@ -1,0 +1,174 @@
+@charset "UTF-8";
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.grid-container {
+ 
+  display: grid;
+   /*border-style: solid;*/
+  /*border-color: red;*/
+  grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  grid-gap: 15px;
+  grid-area: pro;
+  
+}
+.grid-item1 {
+	background-color: #ccff99;
+	/*background-image:url("/image/train.gif");*/
+	text-align: center;
+	/*border: green 5px solid;*/
+	grid-column-start: 1;
+	grid-column-end: 9;
+	grid-row-start:1;
+	grid-row-end: 3
+}
+.grid-item3 {
+	background-color: #ccff99;
+	/*background-image:url("image/maradona_shots.gif");*/
+	/*background-image:url("image/maradona_play.gif");*/
+	text-align: center;
+	color: black;
+	/*border: green 5px solid;*/
+	grid-column-start: 1;
+	grid-column-end: 8;
+	grid-row-start:3;
+	grid-row-end: 7;
+	overflow: auto;
+}
+.grid-item4 {
+	background-color: orange;
+	/*background-image: url("image/maradona_image.jpg");*/
+	background-image:url("/image/train.gif");
+	background-repeat: no-repeat;
+    background-size: 400px 600px;
+	text-align: center;
+	/*border: green 5px solid;*/
+	grid-column-start: 8;
+	grid-column-end: 9;
+	grid-row-start:3;
+	grid-row-end: 8
+}
+.grid-item5 {
+	background-color: #ffcc66;
+	text-align: center;
+	/*border: green 5px solid;*/
+	grid-column-start: 1;
+	grid-column-end: 8;
+	grid-row-start:7;
+	grid-row-end: 8
+}
+.grid-item2 {
+  background: grey;
+  text-align: center;
+ /* border: black 5px solid;*/
+}
+
+.grid-container > div {
+
+  color: white;
+  border-radius: 3rem;
+  padding: 1rem;
+  border-top: 1px solid #666;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+.polaroid {
+  width: 80%;
+  background-color: #ffcc99;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+img {
+	width: 100%;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	margin-bottom: 25px;
+}
+
+img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.center_image {
+        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+ .vcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ 
+ .text_format{
+	 
+ 	font-family: "Sofia", sans-serif;
+ 	font-weight: bold;
+ 	font-size: 5em; /* 40px/16=2.5em */
+ 	color: #663300;
+ 	text-align: center;
+ 	text-shadow: 2px 2px 5px #cc9900;
+ 	
+ }
+ 
+ .copy_format{
+	 
+ 	font-family: "Trirong", serif;
+ 	font-weight: bold;
+ 	font-size: 1.5em; /* 40px/16=2.5em */
+ 	color: black;
+ 	text-align: center;
+ 	text-shadow: 2px 2px 5px white;
+ }
+ 
+ .hlink:link, .hlink:visited {
+  background-color: #99cc00;
+  border-radius: 3rem;
+  padding: 1rem;
+  border-top: 1px solid #666;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hlink:hover, .hlink:active {
+  background-color: #ff9966;
+}
+
+.history_format{
+	font-family: "Rancho", serif;
+ 	font-weight: bold;
+ 	font-size: 2.5em; /* 40px/16=2.5em */
+ 	color: #cc6600;
+ 	text-align: left;
+ 	text-shadow: 2px 2px 5px white;
+}
+
+.history_link:link, .history_link:visited{
+	color: #cc6600;
+}
+
+.history_link:hover, .history_link:active{
+	color: #666633;
+}

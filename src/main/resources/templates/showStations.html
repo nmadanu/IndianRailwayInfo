@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="history.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+<title>Stations List</title>
+</head>
+<body>
+	<div class="grid-container">
+	  	<div class="grid-item1">
+	  	<form action="#" th:action="@{/stationPage}" th:object="${stationdetails}" method="POST">
+				<input type="text" th:field="*{station}" placeholder="Station Name" class="form-control mb-4 col-4">
+				<button type="submit" class="btn btn-info col-2"> Search Stations</button>
+			</form>
+	  	<table border="1" class="table table-striped table-responsive-md table_format">
+	  		<thead class="text_format">
+	  			<tr>
+	  				<th>Station Code</th>
+	  				<th>Station Name</th>
+	  			</tr>
+	  		</thead>
+	  		<tbody class="copy_format" style="color: #993333;">
+				<tr th:each="station : ${liststations}">
+					<td th:text="${station.stationCode}"></td>
+					<td th:text="${station.stationName}"></td>
+				</tr>
+			</tbody>
+		
+		</table>
+	  	</div>
+	  	<div class="grid-item2">
+	  		<a class="normal_format_link history_link" th:href="@{/}">BACK</a>
+	  	</div>
+	  </div>
+</body>
+</html>
