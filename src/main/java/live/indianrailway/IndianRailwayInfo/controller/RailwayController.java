@@ -40,7 +40,7 @@ public class RailwayController {
 	}
 	
 	@PostMapping("/")
-	public String saveEmployee(@ModelAttribute("stationdetails")StationDetailsModel stationdetails, Model model) {
+	public String saveStations(@ModelAttribute("stationdetails")StationDetailsModel stationdetails, Model model) {
 		this.railwayRestClient.getStations(stationdetails.getStation());
 		model.addAttribute("liststations", this.indianRailwayStationServiceImpl.getAllStations());
 		return "indexPage";
